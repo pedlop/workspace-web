@@ -1,3 +1,5 @@
-<p>
-  home works!
-</p>
+<div class="content">
+  <ng-template let-professionals [ngIf]="professionals$ | async">
+    <plop-professionals [professionals]="professionals"></plop-professionals>
+  </ng-template>
+</div>

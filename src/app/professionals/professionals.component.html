@@ -1,0 +1,16 @@
+<mat-card class="active-professional" *ngIf="activeProfessional$ | async as active" [@collapse]>
+  <img class="active-professional__image" src="/assets/placeholder/user-placeholder.png" alt="User Placeholder">
+  <div class="active-professional__info">
+    <span class="active-professional__description">NOME: <b>{{ active.nome }}</b></span>
+    <span class="active-professional__description">CARGO: <b>{{ active.cargo }}</b></span>
+    <span class="active-professional__description">IDADE: <b>{{ active.idade }}</b></span>
+  </div>
+</mat-card>
+<div class="all-professionals">
+
+  <ng-template ngFor let-professional [ngForOf]="professionals">
+    <plop-professionals-item class="item" [professional]="professional"
+      (click)="onClickSelectProfessional($event, professional)">
+    </plop-professionals-item>
+  </ng-template>
+</div>

@@ -6,7 +6,7 @@
   right: 0;
   left: 0;
   height: 4.5em;
-  background-color: $background;
+  background: $background-gradient;
   z-index: 5;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
@@ -16,18 +16,40 @@
   align-items: center;
   justify-content: space-between;
   height: inherit;
-  padding: 0 2em;
+  padding: 0 1em;
 }
 
 .header-content__logo {
-  color: white;
-  font-size: 1.5em;
-  font-family: fantasy;
+  color: $white;
+  font-size: 1em;
+  font-weight: bolder;
+  text-decoration: none;
+  border: 3px solid $dark-blue;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title {
+    padding: 0 10px;
+    height: 100%;
+  }
+  .first-title {
+    color: $dark-blue;
+  }
+  .second-title {
+    color: $blue;
+    background-color: $dark-blue;
+  }
+  .first-title, .second-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .header-content__navigation {
   .header-navigation__item {
-    color: white;
+    color: $white;
     &:not(:last-child) {
       margin-right: 2em;
     }
@@ -36,12 +58,12 @@
     text-decoration: none;
     padding: 0 1em;
     &:hover, &:active  {
-      color: white;
+      color: $white;
     }
     &.active {
-      color: white;
+      color: $white;
       padding-bottom: 0.5em;
-      border-bottom: 2px solid $accent;
+      border-bottom: 2px solid $white;
     }
     transition: color 0.5s;
     will-change: color;
@@ -51,14 +73,16 @@
 .header-navigation__mobile {
   .icon-menu {
     font-size: 2em;
-    color: white;
+    color: $white;
   }
 }
 
 .header-navigation__item-mobile {
-  text-align: center;
-  color: $background;
+  color: $dark-blue;
   &.active {
     background: rgba(0, 0, 0, 0.04);
+  }
+  mat-icon {
+    color: $dark-blue;
   }
 }

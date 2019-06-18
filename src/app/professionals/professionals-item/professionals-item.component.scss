@@ -1,0 +1,30 @@
+@import '../../../colors';
+
+.professional-card {
+  border-radius: unset;
+  padding: 1em;
+  display: flex;
+  
+}
+
+.professional-image {
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+}
+
+.professional-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+  .professional-name {
+    color: $dark-text;
+    font-weight: bold;
+  }
+  .professional-occupation {
+    color: $gray-text;
+    font-weight: 400;
+    font-size: 13px;
+  }
+}

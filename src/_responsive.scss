@@ -1,0 +1,11 @@
+@media screen and (min-width: 768px) {
+  .responsive-content_mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-content_web {
+    display: none;
+  }
+}
