@@ -1,0 +1,67 @@
+@import '../../colors';
+
+.active-professional {
+  border-radius: unset;
+  padding: 1em;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.active-professional__image {
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+}
+
+.active-professional__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+  .active-professional__description {
+    color: $gray-text;
+    font-weight: 400;
+    font-size: 13px;
+    b {
+    color: $dark-text;      
+    }
+  }
+}
+
+.all-professionals {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  cursor: pointer;
+  width: calc(33.33% - 0.67em);
+  margin-bottom: 1em;
+  &:not(:nth-child(3n)) {
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 55em) {
+  .item {
+    width: calc(50% - 0.5em);
+    &:not(:nth-child(3n)) {
+      margin-right: unset;
+    }
+    &:nth-child(odd) {
+      margin-right: 1em;      
+    }
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .item {
+    width: 100%;
+    &:not(:nth-child(3n)) {
+      margin-right: unset;
+    }
+    &:nth-child(odd) {
+      margin-right: unset;      
+    }
+  }
+}

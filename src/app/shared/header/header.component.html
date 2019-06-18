@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="header-content content">
+    <a class="header-content__logo" routerLink="/">
+      <span class="title first-title">SPACE</span>
+      <span class="title second-title">BOX</span>
+    </a>
+    <nav class="header-content__navigation responsive-content_web">
+      <a class="header-navigation__item mat-body" routerLink="/enterprise" routerLinkActive="active">
+        EMPRESA
+      </a>
+      <a class="header-navigation__item mat-body" routerLink="/service" routerLinkActive="active">
+        SERVIÇO
+      </a>
+      <a class="header-navigation__item mat-body" routerLink="/contact" routerLinkActive="active">
+        CONTATO
+      </a>
+    </nav>
+    <div class="header-navigation__mobile responsive-content_mobile">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="icon-menu" color="primary" inline>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="header-navigation__item-mobile mat-body" routerLink="/enterprise"
+          routerLinkActive="active">
+          <mat-icon>domain</mat-icon>
+          EMPRESA
+        </button>
+        <button mat-menu-item class="header-navigation__item-mobile mat-body" routerLink="/service"
+          routerLinkActive="active">
+          <mat-icon>business_center</mat-icon>
+          SERVIÇO
+        </button>
+        <button mat-menu-item class="header-navigation__item-mobile mat-body" routerLink="/contact"
+          routerLinkActive="active">
+          <mat-icon>contact_support</mat-icon>
+          CONTATO
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</header>
