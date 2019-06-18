@@ -37,12 +37,7 @@ export class ProfessionalsComponent implements OnInit {
 
   onClickSelectProfessional(event: Event, professional: Professional): boolean {
     event.stopPropagation();
-    console.log(event, professional);
     this.activeProfessionalEvent.next(professional);
-    // if (professional.id === this.activeProfessionalEvent.getValue().id) {
-    //   professional.active = true;
-    // }
-    console.log(this.professionals);
     return false;
   }
 

@@ -6,7 +6,6 @@ import { MatBadgeModule } from '@angular/material/badge';
 
 import { ProfessionalsItemComponent } from './professionals-item/professionals-item.component';
 import { ProfessionalsComponent } from './professionals.component';
-// import { ProfessionalActiveComponent } from './professionals-active/professionals-active.component';
 
 @NgModule({
   declarations: [
