@@ -17,10 +17,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "surge --project=./dist/workspace-web --domain=https://workspace.surge.sh/"
   },
   "dependencies": {
     "@angular/animations": "^8.0.1",
