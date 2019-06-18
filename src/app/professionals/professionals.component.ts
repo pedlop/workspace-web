@@ -4,6 +4,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 import { Professional } from '../core/api/api.model';
 import { collapse } from '../_animations/collapse';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'plop-professionals',
@@ -19,12 +20,15 @@ export class ProfessionalsComponent implements OnInit {
   @Input() professionals: Professional[];
 
   activeProfessional$: Observable<Professional>;
+  activeProfessionalID: number;
 
   private activeProfessionalEvent: BehaviorSubject<Professional>;
 
   constructor() {
     this.activeProfessionalEvent = new BehaviorSubject(null);
-    this.activeProfessional$ = this.activeProfessionalEvent.asObservable();
+    this.activeProfessional$ = this.activeProfessionalEvent.asObservable().pipe(
+      tap(pro => this.activeProfessionalID = pro.id)
+    );
   }
 
   ngOnInit(): void {

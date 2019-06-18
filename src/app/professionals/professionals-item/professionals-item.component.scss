@@ -1,10 +1,24 @@
 @import '../../../colors';
 
+:host {
+  &.active-box {
+    .professional-card {
+      background-color: $dark-blue;
+    }
+    .professional-name {
+      color: $white;
+    }
+    .professional-occupation {
+      color: $white;
+    }
+  }
+}
+
 .professional-card {
   border-radius: unset;
   padding: 1em;
   display: flex;
-  
+  background-color: $background-box;
 }
 
 .professional-image {
@@ -18,13 +32,15 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 1em;
-  .professional-name {
-    color: $dark-text;
-    font-weight: bold;
-  }
-  .professional-occupation {
-    color: $gray-text;
-    font-weight: 400;
-    font-size: 13px;
-  }
+}
+
+.professional-name {
+  color: $dark-text;
+  font-weight: bold;
+}
+
+.professional-occupation {
+  color: $gray-text;
+  font-weight: 400;
+  font-size: 13px;
 }

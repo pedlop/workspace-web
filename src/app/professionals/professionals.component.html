@@ -7,10 +7,9 @@
   </div>
 </mat-card>
 <div class="all-professionals">
-
   <ng-template ngFor let-professional [ngForOf]="professionals">
-    <plop-professionals-item class="item" [professional]="professional"
-      (click)="onClickSelectProfessional($event, professional)">
+    <plop-professionals-item class="item" [ngClass]="{'active-box': activeProfessionalID === professional.id}"
+      [professional]="professional" (click)="onClickSelectProfessional($event, professional)">
     </plop-professionals-item>
   </ng-template>
 </div>

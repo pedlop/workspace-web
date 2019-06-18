@@ -1,6 +1,19 @@
 {
   "name": "workspace-web",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Web application to see professionals of an enterprise",
+  "author": {
+    "name": "Pedro Victor Lopes",
+    "email": "pedlop.dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedlop/workspace-web"
+  },
+  "bugs": {
+    "url": "https://github.com/pedlop/workspace-web/issues"
+  },
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +22,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^8.0.1",
     "@angular/cdk": "^8.0.1",

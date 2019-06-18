@@ -14,8 +14,6 @@ export class ProfessionalsItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.professional);
-  }
+  ngOnInit(): void { }
 
 }

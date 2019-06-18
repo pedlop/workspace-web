@@ -1,27 +1,48 @@
-# WorkspaceWeb
+# Workspace Web - WW
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+Aplicação Web que renderiza uma página de funcionários e ativa o funcionário selecionado.
 
-## Development server
+### Tecnologias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Workspace Web usa um número de projetos abertos para trabalhar propriamente:
 
-## Code scaffolding
+* [Angular 7] - HTML enhanced for web apps!
+* [Angular Material] - Material Design components for Angular.
+* [Visual Studio Code] - awesome web-based text editor.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+E claro, Workspace Web é 'open source' [public repository][ww] no GitHub.
 
-## Build
+### Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+WW requer [Node.js](https://nodejs.org/) versão 11+ para rodar.
 
-## Running unit tests
+Clone o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Instale as 'dependencies' e 'devDependencies' e rode a aplicação.
 
-## Running end-to-end tests
+```sh
+$ cd workspace-web
+$ npm install
+$ npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Acesse seu browser at http://localhost:4200/
 
-## Further help
+#### Building for source
+Para versão de produção:
+```sh
+$ npm run build
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### A Fazer
+
+ - Write Tests
+ - Progressive Web App
+
+**Software de Graça!**
+
+   [ww]: <https://github.com/pedlop/workspace-web>
+   [Visual Studio Code]: <https://code.visualstudio.com/>
+   [Angular 7]: <https://angular.io/>
+   [Angular Material]: <https://material.angular.io>
+

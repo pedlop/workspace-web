@@ -6,8 +6,8 @@ const routes: Routes = [
   { path: 'enterprise', loadChildren: () => import('./enterprise/enterprise.module').then(mod => mod.EnterpriseModule) },
   { path: 'service', loadChildren: () => import('./service/service.module').then(mod => mod.ServiceModule) },
   { path: 'contact', loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule) },
-  { path: '404', loadChildren: './not-found/not-found.module#NotFoundModule' },
-  { path: '500', loadChildren: './internal-error/internal-error.module#InternalErrorModule' },
+  { path: '404', loadChildren: () => import('./not-found/not-found.module').then(mod => mod.NotFoundModule) },
+  { path: '500', loadChildren: () => import('./internal-error/internal-error.module').then(mod => mod.InternalErrorModule) },
   { path: '**', redirectTo: '/404' }
 ];
 
